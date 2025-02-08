@@ -12,7 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: helloworld
-        run: echo ${{ secrets.TEST_SECRET }}
+        run: |
+            echo ${{ secrets.TEST_SECRET }}
+            echo "Test variable $TEST_VARIABLE "
  
   goodbye:
     runs-on: ubuntu-latest
